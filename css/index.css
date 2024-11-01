@@ -1,0 +1,104 @@
+:root{
+
+    --spanish-gray: hsl(0, 0%, 60%);
+    --sonic-silver: hsl(0, 0%, 47%);
+    --eerie-black: hsl(0, 0%, 13%);
+    --salmon-pink: hsl(353, 100%, 78%);
+    --sandy-brown: hsl(29, 90%, 65%);
+    --bittersweet: hsl(0, 100%, 70%);
+    --ocean-green: hsl(152, 51%, 52%);
+    --davys-gray: hsl(0, 0%, 33%);
+    --cultured: hsl(0, 0%, 93%);
+    --white: hsl(0, 100%, 100%);
+    --onyx: hsl(0, 0%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--white);
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    border-bottom: solid 1px rgba(168, 165, 165, 0.181);
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.9rem;
+}
+.nav-list li{
+    list-style: none;
+    color: var(--spanish-gray);
+    font-size: larger;
+    font-weight: bold;
+}
+.nav-list li:hover{
+ color: var(--salmon-pink);
+}
+.nav-list li i{
+    font-size: 30px;
+}
+
+.slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
