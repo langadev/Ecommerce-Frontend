@@ -25,28 +25,26 @@ const cart = document.querySelector('.icon-cart');
 const closeCartButton = document.querySelector('.close');
 const body = document.querySelector('body');
 
-let productsList = []; // Array to hold products from JSON file
-let cartItems = [];    // Array to hold items in the cart
-
-// Display the current slide based on index
+let productsList = [];  
+let cartItems = [];     
+ 
 function showSlide(index) {
     currentSlide = (index >= totalSlides) ? 0 : (index < 0 ? totalSlides - 1 : index);
     document.querySelector(".slides").style.transform = `translateX(${-currentSlide * 100}%)`;
 }
 
-// Move slide in a given direction
+
 function moveSlide(direction) {
     showSlide(currentSlide + direction);
 }
 
-// Auto-slide every 5 seconds
+
 setInterval(() => moveSlide(1), 5000);
 
-// Toggle cart visibility
 cart.addEventListener('click', () => body.classList.toggle('show-cart'));
 closeCartButton.addEventListener('click', () => body.classList.toggle('show-cart'));
 
-// Display products on the page
+
 function addDataToHTML() {
     lisproductHtml.innerHTML = '';
     productsList.forEach(product => {
@@ -68,16 +66,15 @@ function addDataToHTML() {
     });
 }
 
-// Handle adding product to cart
 lisproductHtml.addEventListener('click', event => {
     if (event.target.classList.contains('add-cart')) {
         const productId = event.target.parentElement.dataset.id;
         addToCart(productId);
-        updateCartCount(); // Update cart count after adding item
+        updateCartCount();  
     }
 });
 
-// Add product to cart and update UI
+
 function addToCart(productId) {
     let productIndex = cartItems.findIndex(item => item.productId == productId);
     if (productIndex < 0) {
@@ -88,7 +85,7 @@ function addToCart(productId) {
     } else {
         cartItems[productIndex].quantity += 1;
     }
-    console.log(cartItems); // Verifica se o item está sendo adicionado
+    console.log(cartItems); 
     updateCartUI();
 }
 
@@ -115,13 +112,13 @@ function updateCartUI() {
 }
 
 
-// Update the cart item count on the icon
+
 function updateCartCount() {
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
     iconCartCount.textContent = totalItems;
 }
 
-// Handle quantity update for cart items
+
 listCart.addEventListener('click', event => {
     const productId = event.target.dataset.id;
 
@@ -132,7 +129,7 @@ listCart.addEventListener('click', event => {
     }
 });
 
-// Update quantity of cart item
+
 function updateQuantity(productId, change) {
     const item = cartItems.find(item => item.productId === productId);
 
@@ -146,7 +143,7 @@ function updateQuantity(productId, change) {
     }
 }
 
-// Fetch products data and initialize
+
 function initApp() {
     fetch('products.json')
         .then(response => response.json())
