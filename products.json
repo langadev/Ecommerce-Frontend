@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "image": "./images/products/jacket-1.jpg",
+        "price": 200,
+        "name": "Winter Leather Jacket",
+        "description": "Men's stylish winter jacket made of high-quality leather."
+    },
+    {
+        "id": 2,
+        "image": "./images/products/jacket-2.jpg",
+        "price": 250,
+        "name": "Classic Bomber Jacket",
+        "description": "A classic bomber jacket with a modern twist, perfect for winter."
+    },
+    {
+        "id": 3,
+        "image": "./images/products/jacket-6.jpg",
+        "price": 180,
+        "name": "Casual Denim Jacket",
+        "description": "Lightweight and comfortable denim jacket for casual wear."
+    },
+    {
+        "id": 4,
+        "image": "./images/products/jewellery-1.jpg",
+        "price": 120,
+        "name": "Gold Plated Necklace",
+        "description": "Elegant gold-plated necklace to enhance any outfit."
+    },
+    {
+        "id": 5,
+        "image": "./images/products/jewellery-3.jpg",
+        "price": 100,
+        "name": "Silver Bracelet",
+        "description": "A stylish silver bracelet for everyday elegance."
+    },
+    {
+        "id": 6,
+        "image": "./images/products/jewellery-2.jpg",
+        "price": 150,
+        "name": "Pearl Earrings",
+        "description": "Beautiful pearl earrings with a modern design."
+    },
+    {
+        "id": 7,
+        "image": "./images/products/shirt-1.jpg",
+        "price": 75,
+        "name": "Cotton Casual Shirt",
+        "description": "Comfortable cotton shirt, perfect for casual outings."
+    },
+    {
+        "id": 8,
+        "image": "./images/products/shirt-2.jpg",
+        "price": 85,
+        "name": "Linen Formal Shirt",
+        "description": "A formal linen shirt suitable for office wear."
+    },
+    {
+        "id": 9,
+        "image": "./images/products/shoe-1.jpg",
+        "price": 130,
+        "name": "Running Sneakers",
+        "description": "Lightweight sneakers designed for running and active wear."
+    },
+    {
+        "id": 10,
+        "image": "./images/products/shoe-2_1.jpg",
+        "price": 140,
+        "name": "Leather Dress Shoes",
+        "description": "Classic leather dress shoes perfect for formal occasions."
+    }
+]

@@ -1,217 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/index.css" />
-    <title>Ecomme|Vendas</title>
+    <title>Ecommerce | Vestuário</title>
 </head>
-
 <body>
-    <nav class="navbar">
-        <h1>AJA</h1>
-        <ul class="nav-list">
-            <li>Home</li>
-            <li>Categoies</li>
-            <li>About</li>
-        </ul>
-        <ul class="nav-list">
-            <li><i class="bx bx-cart"></i></li>
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-user"></i></li>
-        </ul>
-    </nav>
+   <nav class="navbar">
+  <h1>AJA</h1>
+  <ul class="nav-list">
+    <li>Home</li>
+    <li class="dropdown">
+      Categories
+      <ul class="dropdown-menu">
+        <li>Electronics</li>
+        <li>Clothing</li>
+        <li>Home & Garden</li>
+        <li>Beauty</li>
+      </ul>
+    </li>
+    <li>About</li>
+  </ul>
+  <ul class="nav-list">
+    <li class="icon-cart">
+      <i class="bx bx-cart"></i>
+      <span class="icon-cart-count">0</span>
+    </li>
+    <li><i class="bx bx-heart"></i><span class="icon-heart-count">0</span></li>
+    <li class="dropdown">
+      <i class="bx bx-user"></i>
+      <ul class="dropdown-menu">
+        <li><a href="./register.html">Registrar</a></li>
+        <li>Orders</li>
+        <li>Logout</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
     <section>
         <div class="slider">
-            <div class="slider">
-                <div class="slides">
-
-                    <div class="slide"><img src="./images/banner-1.jpg" alt="Imagem 1"></div>
-                    <div class="slide"><img src="./images/banner-2.jpg" alt="Imagem 2"></div>
-                    <div class="slide"><img src="./images/banner-3.jpg" alt="Imagem 3"></div>
-                </div>
-
-
-                <button class="prev buttons" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next buttons" onclick="moveSlide(1)">&#10095;</button>
+            <div class="slides">
+                <div class="slide"><img src="./images/banner-1.jpg" alt="Promoção de moda"></div>
+                <div class="slide"><img src="./images/banner-2.jpg" alt="Descontos em acessórios"></div>
+                <div class="slide"><img src="./images/banner-3.jpg" alt="Estilos para a temporada"></div>
             </div>
+            <button class="prev buttons" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next buttons" onclick="moveSlide(1)">&#10095;</button>
+        </div>
     </section>
 
-        <section class="">
-            <div class="today">
-                <h2>Deal of the day</h2>
-                <div class="trending">
-                    <img  src="./images/products/sports-6.jpg" alt="">
-                    <div class="content">
-                        <span>stars</span>
-                        <h3 >shampoo, conditioner & facewash packs</h3>
-                        <span class="desc">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor</span>
-                       <h3 id="pricer">$150.00 <del id="prive-price">$200.00</del></h3> 
-                       <button>Add to Cart</button> 
-                       <div class="hurry">
-                        <span>already sold: <span class="qt">20</span></span>
-                        <span> available: <span class="qt">40</span></span>
-                       </div>
-                       <div class="time">
-                        <h4>Hurry Up! Offer ends in:</h4>
+    <section>
+        <div class="today">
+            <h2>Deal of the day</h2>
+            <div class="trending">
+                <img src="./images/products/sports-6.jpg" alt="Oferta do dia">
+                <div class="content">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <h3>Kit Shampoo, Condicionador & Facewash</h3>
+                    <span class="desc">Pacote de cuidados pessoais premium.</span>
+                    <h3 id="pricer">$150.00 <del id="prive-price">$200.00</del></h3>
+                    <button>Add to Cart</button>
+                    <div class="hurry">
+                        <span>Já vendidos: <span class="qt">20</span></span>
+                        <span>Disponíveis: <span class="qt">40</span></span>
+                    </div>
+                    <div class="time">
+                        <h4>Corre! Oferta termina em:</h4>
                         <div class="date">
-                        <span class="date-item">25 <span>days</span></span>
-                        <span class="date-item">15<span>hours</span></span>
-                        <span class="date-item">30 <span>min</span></span>
-                        <span class="date-item">00 <span>sec</span></span>
+                            <span class="date-item">25 <span>dias</span></span>
+                            <span class="date-item">15<span>horas</span></span>
+                            <span class="date-item">30 <span>min</span></span>
+                            <span class="date-item">00 <span>seg</span></span>
                         </div>
-                        
-                       </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <section class="Products">
         <h2>New Products</h2>
         <div class="new-products">
             <div class="product">
-                <img src="./images/products/jacket-1.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">Mens Winter Leathers Jackets</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-
-            <div class="product">
-                <img src="./images/products/jacket-2.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">Mens Winter Leathers Jackets</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-
-            <div class="product">
-                <img src="./images/products/jacket-6.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">MEN Yarn Fleece Full-Zip Jacket</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-
-            <div class="product">
-                <img src="./images/products/jewellery-1.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">description</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-                <div class="side-items">
-                    <ul class="side-items-list">
-                        <li>her<i class="bx bx-cart"></i></li>
-                        <li>us<i class="bx bx-heart"></i></li>
-                        <li>cart<i class="bx bx-user"></i></li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="product">
-                <img src="./images/products/jewellery-3.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">description</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-
-            <div class="product">
-                <img src="./images/products/jewellery-2.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">description</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-            <div class="product">
-                <img src="./images/products/shirt-1.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">Pure Garment Dyed Cotton Shirt</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-            <div class="product">
-                <img src="./images/products/shirt-2.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">Pure Garment Dyed Cotton Shirt</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-            <div class="product">
-                <img src="./images/products/shoe-1.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">Casual Men's Brown shoes</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
-            </div>
-            <div class="product">
-                <img src="./images/products/shoe-2.jpg" alt="">
-                <span class="name">Name</span>
-                <span class="description">Casual Men's Brown shoes</span>
-                <span class="stars">stars</span>
-                <span class="price">Price</span>
+                <img src="./images/products/jacket-1.jpg" alt="Jaqueta Masculina">
+                <span class="name">Jaqueta Masculina</span>
+                <span class="description">Jaquetas de couro para inverno</span>
+                <span class="stars"><i class='bx bxs-star'></i></span>
+                <span class="price">$99.99</span>
+                <button class="add-cart">Add to Cart</button>
             </div>
         </div>
     </section>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="list-cart"></div>
+        <div class="btn">
+            <button class="close">Close</button>
+            <button class="checkout">Check Out</button>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-links">
             <div class="footer-link">
                 <h2>Categories</h2>
-                <li><a href="">Fashion</a></li>
-                <li><a href="">Electronic</a></li>
-                <li><a href="">Cosmetic</a></li>
-                <li><a href="">Health</a></li>
+                <ul>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Electronic</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                </ul>
             </div>
-            
-            
             <div class="footer-link">
                 <h2>Products</h2>
-                <li><a href="">Prices drop</a></li>
-                <li><a href=""> New products</a></li>
-                <li><a href="">Contact us</a></li>
-                <li><a href="">Sitemap</a></li>
+                <ul>
+                    <li><a href="#">Prices drop</a></li>
+                    <li><a href="#">New products</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
             </div>
-
-        
             <div class="footer-link">
                 <h2>Our Company</h2>
-                <li><a href="">Delivery</a></li>
-                <li><a href="">Legal Notice</a></li>
-                <li><a href="">Terms and conditions</a></li>
-                <li><a href="">About us</a></li>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
             </div>
-
             <div class="footer-link">
                 <h2>Contact</h2>
-                <li><a href="">Matola</a></li>
-                <li><a href="">+258845350611</a></li>
-                <li><a href="">alfredolanga360@gmail.com</a></li>
+                <ul>
+                    <li><a href="#">Matola</a></li>
+                    <li><a href="tel:+258845350611">+258 845350611</a></li>
+                    <li><a href="mailto:alfredolanga360@gmail.com">alfredolanga360@gmail.com</a></li>
+                </ul>
             </div>
         </div>
-
-       <div class="payment">
-        <ul class="payment-methods">
-            <li><a href="">visa</a></li>
-            <li><a href="">Mpesa</a></li>
-            <li><a href="">Emola</a></li>
-            <li><a href="">Mkesh</a></li>
-        </ul>
-       
-       </div>
-       <div class="copyright">
-        <p>@ 2024 Alfredo Langa</p>
-       </div>
-      
-
+        <div class="payment">
+            <ul class="payment-methods">
+                <li><a href="#">Visa</a></li>
+                <li><a href="#">Mpesa</a></li>
+                <li><a href="#">Emola</a></li>
+                <li><a href="#">Mkesh</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Alfredo Langa</p>
+        </div>
     </footer>
 
     <script src="./js/script.js"></script>
 </body>
-
 </html>
